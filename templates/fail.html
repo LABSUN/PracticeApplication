@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Weather Data</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <link href="data:image/x-icon;base64,AAABAAEAEBAQAAAAAAAoAQAAFgAAACgAAAAQAAAAIAAAAAEABAAAAAAAgAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA/4QAAP///wAA0P8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABEREREREREAEAAAAAAAAQACIiIiIiIgACIiIiIiIiIAIiIiIiIiIgAiIiIiIiIiAAIiIiIiIiAAEAACIiIAAwAREQIiIgMzABERECIgMzMAERERAAMzMwAREREDMzMzABERERAzMzAAEREREQAAAQAAAAAAAAAACAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAQAA" rel="icon" type="image/x-icon" />
+
+    <style>
+      body{
+        text-align: center;
+      }/*end body*/
+
+      #submitbutton{
+      background-color:red;
+      color:white;
+      border-radius: 25px;
+      border: 0px solid red; 
+      font-weight: bold; 
+      padding: 15px;
+      margin:30px;
+      }
+
+      #submitbutton:hover{
+        background-color: white;
+        color: red;
+      }
+
+      #countryenter{
+        width:500px; 
+        border-radius: 10px;
+        border: 2px solid darkgrey;
+        height:40px;padding:5px; 
+        outline: none;
+      }
+
+      #countryenter:hover{
+        border: 3px solid lightblue;
+      }
+
+    #inputbox{
+        background-color:lightgrey;
+      }
+      #divmain{
+        background-color:red;
+        margin:0px;
+        height:150px;
+        color:white;
+        font-size:100%;
+        padding-top:10px;
+      }
+
+      #degree{
+        border-radius: 10px;
+        border: 2px solid darkgrey;
+        height:40px;
+        padding:5px; 
+        outline: none;
+      }
+
+      #degree:hover{
+        border: 3px solid lightblue;
+      }
+
+    </style>
+
+  </head>
+  <body>
+    <div>
+      <div id="divmain" style ="margin-top:0px";>
+      <h1 class="display-1"><a style = "text-decoration: none; color: white;" href = "/">Weather App</a></h1>
+    </div>
+    <div id = "inputbox">
+    <form action="/city" method="post">
+      <input id="countryenter" value= {{city}} placeholder="ex: Paris" type="text" name="city"></input>
+      <select id="degree" name="temp" id="temp">
+        <option value="f">Farenheit</option>
+        <option value="c">Celcius</option>
+        <option value="k">Kelvin</option>
+     </select>
+      <input id="submitbutton"  type="submit" value="Enter City"></input>
+  </form>
+  </div>
+    <h1 style = "font-size:70px;font-weight: bold;padding-top:50px;">This city doesn't have data or doesn't exist &#128532;</h1>
+    <img style = "padding:50px;height:500px;width:500px;" src="https://s8.gifyu.com/images/cryinglebron.gif" alt="cryinglebron" border="0">
+  </body>
+</html>
